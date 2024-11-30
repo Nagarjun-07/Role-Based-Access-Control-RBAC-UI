@@ -26,5 +26,26 @@ The **RBAC UI** is a user-friendly web interface for managing users, roles, and 
    git clone https://github.com/Nagarjun-07/Role-Based-Access-Control-RBAC-UI.git
 
 2. **Select live share option**: if you dont have live share option . Install it through extension and clicking on the live share option will take you to the port and if you dont like it another option is using npm start.
-   
+3. ** the Live Share Extension:**
+
+If you don't have the Live Share extension installed, open Visual Studio Code, go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window, or pressing Ctrl+Shift+X.
+Search for Live Share and install the extension.
+Start a Live Share Session:
+
+After installing Live Share, click on the Live Share icon in the top-right corner of Visual Studio Code.
+Click on Start Collaboration Session to start sharing your workspace with others.
+Share the generated link with your collaborators so they can join your session.
+Collaborate in Real-Time:
+
+Once your collaborators join the Live Share session, you can edit the project files in real-time.
+You can also share your terminal, debug sessions, and even run the project together.
+Launch the Project: This is a front-end project, so you can directly view it in your browser by opening the index.html file:
+
+**Open the index.html** file in your browser by double-clicking it or right-clicking and selecting Open with your browser.
+Alternatively, you can use the Live Server extension in Visual Studio Code to serve the project locally by right-clicking index.html and selecting Open with Live Server.
+**Test the UI**: Once the project is running in your browser, you can test the functionality such as:
+
+Adding users
+Assigning roles
+Managing permissions
    
