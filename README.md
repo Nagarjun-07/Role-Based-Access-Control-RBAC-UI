@@ -1,4 +1,8 @@
 # Role-Based Access Control (RBAC) UI
+![image](https://github.com/user-attachments/assets/24ff780e-2c77-4e66-94e6-489a40d98462)
+
+![image](https://github.com/user-attachments/assets/6ae229fd-ac94-44ca-8edb-4a3d2a45e2fe)
+
 
 ## Project Description:
 The **RBAC UI** is a user-friendly web interface for managing users, roles, and permissions. It is designed for administrators to easily manage access control in a secure and efficient manner. The project allows role assignments, permission modifications, and user management, making it a crucial tool for secure systems.
