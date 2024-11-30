@@ -25,8 +25,7 @@ The **RBAC UI** is a user-friendly web interface for managing users, roles, and 
    ```bash
    git clone https://github.com/Nagarjun-07/Role-Based-Access-Control-RBAC-UI.git
 
-2. **Select live share option**: if you dont have live share option . Install it through extension and clicking on the live share option will take you to the port and if you dont like it another option is using npm start.
-3. **The live share **:
+2. **Select live share option**: if you dont have live share option . Install it through extension and clicking on the live share option will take you to the port and if you dont like it another option is using npm start
 
 If you don't have the Live Share extension installed, open Visual Studio Code, go to the Extensions view by clicking on the Extensions icon in the Activity Bar on the side of the window, or pressing Ctrl+Shift+X.
 Search for Live Share and install the extension.
