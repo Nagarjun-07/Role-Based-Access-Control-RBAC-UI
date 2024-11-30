@@ -25,4 +25,6 @@ The **RBAC UI** is a user-friendly web interface for managing users, roles, and 
    ```bash
    git clone https://github.com/Nagarjun-07/Role-Based-Access-Control-RBAC-UI.git
 
-2.**select live share option**: if you dont have live share option . Install it through extension and clicking on the live share ption will take you to the port
+2. **Select live share option**: if you dont have live share option . Install it through extension and clicking on the live share option will take you to the port and if you dont like it another option is using npm start.
+   
+   
