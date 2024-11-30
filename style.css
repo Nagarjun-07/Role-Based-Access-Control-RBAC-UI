@@ -1,12 +1,13 @@
 /* Base Styles */
 :root {
     --primary-color: #4CAF50; /* Green */
-    --secondary-color: #ffffff; /* White */
-    --background-color: #f5f5dc; /* Beige */
-    --text-color: #333333; /* Dark Text */
-    --dark-mode-bg: #1e1e1e; /* Dark Mode Background */
-    --dark-mode-text: #e4e4e4; /* Light Text for Dark Mode */
-    --dark-mode-primary: #34a853; /* Dark Green for Dark Mode */
+    --secondary-color: #FFFFFF; /* White */
+    --accent-color: #FFC107; /* Amber */
+    --background-color: #F5F5F5; /* Light Gray */
+    --text-color: #2C2C2C; /* Dark Gray */
+    --dark-mode-bg: #1A1A1A; /* Very Dark Gray */
+    --dark-mode-text: #01090b; /* Light Gray for Dark Mode */
+    --dark-mode-primary: #81C784; /* Light Green for Dark Mode */
 }
 
 /* Dark Mode Variables */
@@ -17,27 +18,40 @@ body.dark-mode {
     --secondary-color: var(--dark-mode-bg);
 }
 
+/* Global Styles */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
 }
 
 /* Sidebar Styles */
 .sidebar {
-    width: 250px; /* Sidebar width */
-    background-color: var(--primary-color);
+    width: 260px;
+    background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
     color: var(--secondary-color);
-    height: 100vh; /* Full height */
-    padding: 20px;
-    position: fixed; /* Stays in place */
-    top: 0; /* Aligns to top */
-    left: 0; /* Aligns to left */
-    box-sizing: border-box; /* Includes padding in width */
-    transition: transform 0.3s ease; /* Smooth hide/show effect */
-    overflow-y: auto; /* Allow scrolling for content */
+    height: 100vh;
+    padding: 25px 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0 15px 15px 0;
+    transition: transform 0.4s ease;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
 }
 
 .sidebar ul {
@@ -52,35 +66,40 @@ body {
 .sidebar ul li a {
     text-decoration: none;
     color: var(--secondary-color);
-    font-size: 16px;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .sidebar ul li a:hover {
-    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateX(10px);
 }
 
-/* Main Content Styles */
+/* Main Content */
 .main-content {
-    margin-left: 250px; /* Push content to the right of the sidebar */
-    padding: 20px; /* Add spacing */
-    width: calc(100% - 250px); /* Adjust width dynamically */
-    box-sizing: border-box; /* Includes padding in width */
-    transition: margin-left 0.3s ease;
+    margin-left: 270px;
+    padding: 30px;
+    transition: margin-left 0.4s ease;
 }
 
 /* Button Styles */
 button {
     background-color: var(--primary-color);
     color: var(--secondary-color);
-    padding: 10px 20px;
+    padding: 12px 25px;
     border: none;
-    border-radius: 5px;
+    border-radius: 20px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background-color: #3e8e41; /* Slightly darker green */
+    background-color: var(--accent-color);
+    transform: translateY(-3px);
 }
 
 /* Table Styles */
@@ -88,12 +107,16 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 table th, table td {
-    border: 1px solid var(--primary-color);
-    padding: 10px;
+    padding: 15px;
     text-align: left;
+    border-bottom: 1px solid #ddd;
 }
 
 table th {
@@ -102,143 +125,15 @@ table th {
 }
 
 table tr:nth-child(even) {
-    background-color: var(--background-color);
+    background-color: #eaf1ed; /* Light Green */
 }
 
 table tr:nth-child(odd) {
-    background-color: #eaf7ea; /* Light green */
+    background-color: #edf6ed; /* Lighter Green */
 }
 
 table tr:hover {
-    background-color: #d4edd4; /* Slightly darker light green */
-}
-
-/* Dark Mode Overrides */
-body.dark-mode .sidebar {
-    background-color: var(--dark-mode-primary);
-    color: var(--dark-mode-text);
-}
-
-body.dark-mode .sidebar ul li a {
-    color: var(--dark-mode-text);
-}
-
-body.dark-mode button {
-    background-color: var(--dark-mode-primary);
-    color: var(--dark-mode-text);
-}
-
-body.dark-mode table tr:nth-child(odd),
-body.dark-mode table tr:nth-child(even) {
-    background-color: var(--dark-mode-bg);
-}
-
-body.dark-mode table tr:hover {
-    background-color: #32383e; /* Slightly lighter dark background */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .sidebar {
-        transform: translateX(-100%); /* Hide sidebar by default */
-    }
-
-    .sidebar.active {
-        transform: translateX(0); /* Show sidebar when active */
-    }
-
-    .main-content {
-        margin-left: 0; /* Full width for main content */
-        width: 100%; /* Take up full width */
-    }
-
-    button#toggle-sidebar {
-        display: block; /* Show toggle button on small screens */
-        margin-bottom: 20px;
-    }
-}
-
-/* Toggle Sidebar Button */
-button#toggle-sidebar {
-    display: none; /* Hidden by default */
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button#toggle-sidebar:hover {
-    background-color: #3e8e41; /* Slightly darker green */
-}
-/* General Styling */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.sidebar {
-    width: 250px;
-    background-color: #3e8e41;
-    color: white;
-    padding: 15px;
-    position: fixed;
-    height: 100%;
-    top: 0;
-}
-
-.sidebar h2 {
-    text-align: center;
-}
-
-.sidebar ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.sidebar ul li {
-    margin: 15px 0;
-}
-
-.sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-.main-content {
-    margin-left: 260px;
-    padding: 20px;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid #ddd;
-}
-
-th, td {
-    padding: 8px;
-    text-align: left;
+    background-color: #80ef91; /* Hover Effect */
 }
 
 /* Modal Styling */
@@ -251,51 +146,60 @@ th, td {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
 }
 
 .modal-content {
-    background-color: #fff;
+    background: #F1F8E9;
     margin: 10% auto;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 15px;
     width: 80%;
     max-width: 500px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .close {
-    color: #aaa;
+    color: var(--text-color);
     font-size: 28px;
     font-weight: bold;
     position: absolute;
-    top: 0;
-    right: 15px;
+    top: 10px;
+    right: 20px;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
+.close:hover, .close:focus {
+    color: var(--primary-color);
     cursor: pointer;
 }
 
-/* Permission Checkbox Styling */
-#permissionsContainer label {
-    display: block;
-    margin-bottom: 5px;
-}
+/* Sidebar Toggle Button */
 .sidebar-toggle-btn {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 24px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
     display: none;
 }
+
+.sidebar-toggle-btn:hover {
+    transform: rotate(90deg);
+    background-color: var(--accent-color);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
     .sidebar {
-        transform: translateX(-250px);
+        transform: translateX(-260px);
     }
 
     .sidebar.active {
@@ -308,10 +212,5 @@ th, td {
 
     .sidebar-toggle-btn {
         display: block;
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        z-index: 10;
     }
 }
-

@@ -1,6 +1,7 @@
+/* eslint-disable no-unused-vars */
 // Data Storage
 let users = [
-    { id: 1, name: "John Doe", email: "john@example.com", role: "Admin", status: "Active" },
+    { id: 1, name: "Nagarjun Bharadwaj", email: "nagarjunh77@gmail.com", role: "Admin", status: "Active" },
 ];
 
 let roles = [
@@ -194,5 +195,4 @@ document.addEventListener("DOMContentLoaded", () => {
     renderUserTable();
     renderRoleTable();
 });
-
 
