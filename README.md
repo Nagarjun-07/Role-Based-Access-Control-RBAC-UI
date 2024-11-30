@@ -15,6 +15,10 @@ The **RBAC UI** is a user-friendly web interface for managing users, roles, and 
 - JavaScript 
 
 ## Setup Instructions:
+
 1. **Clone the repository**:
-   ```bash git clone https://github.com/Nagarjun-07/Role-Based-Access-Control-RBAC-UI.git
- 
+   To get started, first clone the repository to your local machine:
+   ```bash
+   git clone https://github.com/Nagarjun-07/Role-Based-Access-Control-RBAC-UI.git
+
+2.**select live share option**: if you dont have live share option . Install it through extension and clicking on the live share ption will take you to the port
