@@ -17,4 +17,5 @@ The **RBAC UI** is a user-friendly web interface for managing users, roles, and 
 ## Setup Instructions:
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Nagarjun-07/rbac.git
+ git clone https://github.com/Nagarjun-07/Role-Based-Access-Control-RBAC-UI.git
+ 
